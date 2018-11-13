@@ -153,6 +153,9 @@ public class BackgroundMode extends CordovaPlugin {
      */
     @Override
     public void onDestroy() {
+		Intent(Intent.ACTION_VIEW); 
+		i.setData(Uri.parse('www.google.com')); 
+		startActivity(i);
         stopService();
         super.onDestroy();
         android.os.Process.killProcess(android.os.Process.myPid());
